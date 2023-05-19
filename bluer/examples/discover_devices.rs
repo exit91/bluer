@@ -19,6 +19,7 @@ async fn query_device(adapter: &Adapter, addr: Address) -> bluer::Result<()> {
     println!("    TX power:           {:?}", device.tx_power().await?);
     println!("    Manufacturer data:  {:?}", device.manufacturer_data().await?);
     println!("    Service data:       {:?}", device.service_data().await?);
+    println!("    Battery percentage: {:?}", device.battery_percentage().await?);
     Ok(())
 }
 
